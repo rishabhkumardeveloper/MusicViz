@@ -244,7 +244,7 @@ class HistogramView {
     .range(range);
 
     // used for forcing x axis ticks to have specific values
-    let numTicks = 1; // <--- Adjust this value to force a different number of ticks on the axis
+    let numTicks = 10; // <--- Adjust this value to force a different number of ticks on the axis
     let start = this.x.domain()[0];
     let end = this.x.domain()[1];
     let step = (this.x.domain()[1] - this.x.domain()[0])/numTicks;
@@ -341,7 +341,7 @@ class HistogramView {
 
             // send a filtering function out to the other components to highlight the id's in this bin everywhere
              _this.dispatch.call('highlight', this, (k) => idsInBin.includes(k.id));
-              callTutorial('#hist0', 'You can also filter songs by attributes<br>by brushing over these histograms.', 'w')
+              // callTutorial('#hist0', 'You can also filter songs by attributes<br>by brushing over these histograms.', 'w')
             }
           })
           .on("mousedown", function(d) {

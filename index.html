@@ -50,7 +50,7 @@
     />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
-  <body>
+  <body style="background-image: url(bg.png);">
     <!-- TODO remove inline CSS -->
     <!-- <div id="tutorial-landing" class="overlay-popup full-page">
 			<img src="img/tutorial_landing.png" style="width: 60%; max-width: 800px;">
@@ -61,13 +61,13 @@
     <div class="container-main container-row container-col-sm">
       <div class="cell container-col sidebar-lg">
         <div class="hidden-sm">
-          <h1 class="logo">VINYL</h1>
+          <h1 class="logo">VizSong</h1>
           <p class="subtitle">
-            <small>Comparing Music Artists through Visualization</small>
+            <small>Discover Songs with visualisations via Spotify API</small>
           </p>
         </div>
         <div class="hidden-lg" style="margin-bottom: 10px">
-          <i><b>VINYL</b></i> - Comparing Music Artists through Vis
+          <i><b>VizSong</b></i> - Comparing Music Artists through Vis
         </div>
         <div class="grow">
           <!-- <h2>I'm interested in...</h2> -->
@@ -89,24 +89,18 @@
             >
           </div>
         </div>
-        <div class="collapse-sm" style="display: none;">
-          <h2 id="select-more-options">More Options</h2>
+        <div class="collapse-sm">
+          <div class="container-column" style="margin:auto;">
+						<div class="cell panel dont-reset-selection" id="options-panel" style="visibility: hidden";  >
 
-          <div class="container-column" style="margin: auto">
-            <div class="cell panel dont-reset-selection" id="options-panel">
-              <div class="mb-xs">
-                <div class="margin-gutter">
-                  <div class="mb-xxs">
-                    <small>Find a song on this chart</small>
-                  </div>
-                  <input
-                    type="text"
-                    class="btn vis-control"
-                    id="search-highlight"
-                    style="width: 100%"
-                  />
-                </div>
-              </div>
+							<div class="mb-xs" >
+								<div class="margin-gutter" >
+									<div class="mb-xxs">
+										
+									</div>
+									<input type="text" class="btn vis-control" id="search-highlight" style="width: 100%;" style="visibility: hidden;">
+								</div>
+							</div>
 
               <!-- </div> -->
               <!-- <div class="container-row">
@@ -123,47 +117,43 @@
               <!-- <div class="container-col"> -->
               
 
-              <div class="container-row mb-xs">
-                <div class="grow">
-                  <small class="add-help" data-help-key="split-view"
-                    >Split View
-                  </small>
+                <div class="grow container-row mb-xs">
+                  <div class="grow">
+                    
+                  </div>
+                  <label class="switch vis-control">
+                    <input type="checkbox" id="toggle-pca" class="vis-control" style="visibility: hidden; ">
+                    <span class="slider round" style="visibility: hidden"></span>
+                  </label>
                 </div>
-                <label class="switch vis-control">
-                  <input
-                    type="checkbox"
-                    id="toggle-split-view"
-                    class="vis-control"
-                  />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="container-row mb-xs">
-                <div class="grow">
-                  <small>Show Album Cover</small>
+
+                <div class="container-row mb-xs">
+                  <div class="grow">
+                    
+                  </div>
+                  <label class="switch vis-control">
+                    <input type="checkbox" id="toggle-split-view" class="vis-control" style="visibility: hidden;">
+                    <span class="slider round" ></span>
+                  </label>
                 </div>
-                <label class="switch vis-control">
-                  <input
-                    type="checkbox"
-                    id="toggle-album-art"
-                    class="vis-control"
-                  />
-                  <span class="slider round"></span>
-                </label>
-              </div>
-              <div class="container-row mb-xs">
-                <div class="grow">
-                  <small>Avoid Overlapping</small>
+                <div class="container-row mb-xs">
+                  <div class="grow">
+                    
+                  </div>
+                  <label class="switch vis-control">
+                    <input type="checkbox" id="toggle-album-art" class="vis-control" style="visibility: hidden;">
+                    <span class="slider round"></span>
+                  </label>
                 </div>
-                <label class="switch vis-control">
-                  <input
-                    type="checkbox"
-                    id="toggle-force"
-                    class="vis-control"
-                  />
-                  <span class="slider round"></span>
-                </label>
-              </div>
+                <div class="container-row mb-xs">
+                  <div class="grow">
+                    
+                  </div>
+                  <label class="switch vis-control">
+                    <input type="checkbox" id="toggle-force" class="vis-control" style="visibility: hidden;">
+                    <span class="slider round"></span>
+                  </label>
+                </div>
               <div class="container-row mb-xs">
                 <button
                   class="btn btn-block clickable"
@@ -175,18 +165,6 @@
             </div>
           </div>
           <!-- <h2>About the Data</h2> -->
-          <p class="text-muted" style="margin-bottom: 0">
-            <small>
-              <b>About the Data</b>
-              <i
-                >The data visualized here were pulled from
-                <a href="https://developer.spotify.com/" target="_blank"
-                  >Spotify API</a
-                >. Most data attributes are computed by Spotify's audio analysis
-                algorithms.</i
-              >
-            </small>
-          </p>
         </div>
       </div>
       <div class="cell grow container-col central-column">
@@ -194,7 +172,7 @@
           id="vis-area"
           class="cell grow container-col container-col-rev-sm anti-cell-sm"
         >
-          <div class="container-row" id="select-axes">
+          <div class="container-row" id="select-axes" style="margin-top: -400px; margin-left: 50%; width: 50%;" >
             <!-- <div class="cell grow mb-xs" style="margin-bottom: 10px;">
 							<div>
 								<small class="nowrap">Position data points by</small>
@@ -210,7 +188,7 @@
 								</div>
 							</div>
 						</div> -->
-            <div class="cell grow">
+            <div class="cell grow" style="margin-left:53%; margin-top:0;">
               <div class="margin-gutter">
                 <div>
                   <small class="nowrap">X Axis</small>
@@ -219,7 +197,7 @@
                   name="select-x-axis"
                   class="btn active vis-control"
                   id="select-x-axis"
-                  style="width: 100%"
+                  style="width: 90%;"
                 >
                   <option
                     data-scale-type="linear"
@@ -317,13 +295,13 @@
             <div class="cell grow">
               <div class="margin-gutter">
                 <div>
-                  <small class="nowrap">Y Axis</small>
+                  <small class="nowrap" style="margin-left: 57.5%">Y Axis</small>
                 </div>
                 <select
                   name="select-y-axis"
                   class="btn active vis-control"
                   id="select-y-axis"
-                  style="width: 100%"
+                  style="width: 40%; margin-left: 57.5%;"
                 >
                   <option
                     data-scale-type="linear"
@@ -427,7 +405,7 @@
           <div class="grow container-col">
             <!-- <div class="grow container-col" style="padding-bottom: 30px;"> -->
             <!-- <div class="grow" id="radial-view"></div> -->
-            <svg id="radial-view" class="grow" overflow="visible"></svg>
+            <svg id="radial-view" class="grow" overflow="visible" height="700px" width="700px" style="margin-left:33%; margin-top: -25px"></svg>
           </div>
           <!-- <div class="" style="padding-top: 20px; padding-bottom: 20px;">
 						Other songs similar to your selection:
@@ -461,10 +439,9 @@
 					</div>-->
         </div>
       </div>
-      
-      <div class="cell container-col collapse-sm sidebar-lg" >
+      <div class="cell container-col collapse-sm sidebar-lg" style="margin-left: 25%; margin-top: 20px; margin-bottom: 100px;" >
         <h2>Song Feature Distributions</h2>
-        <svg id="histogram-view" class="grow" overflow="visible"></svg>
+        <svg id="histogram-view" class="grow" overflow="visible" width="1000px" height="2000px" ></svg>
         <!-- <h2>Legend</h2>
 				<div class="panel">
 					<ul>
@@ -473,17 +450,7 @@
 						<li>Image</li>
 					</ul>
 				</div> -->
-        <p class="text-muted" style="margin-bottom: 0; margin-top: 0">
-          <small>
-            <b>Made by</b>
-            <i
-              ><a href="https://taepras.com">Tae Prasongpongchai</a>,
-              <a href="https://www.xichen.design/">Xi Chen</a>,
-              <a href="http://www.benjamindupreez.com/">Benjamin Du Preez</a>,
-              <a href="http://fmckenziemurphy.com/">McKenzie Murphy</a></i
-            >
-          </small>
-        </p>
+    
       </div>
     </div>
     
@@ -498,7 +465,7 @@
         <div class="text-center">
           <i class="fa fa-angle-up" id="expand-icon" style="opacity: 0"></i>
         </div>
-        <div class="flex-container">
+        <div class="flex-container" style="opacity: 40%;">
           <div id="starTitleLabel" class="text-center grow">
             Drag a song here for more details
           </div>
@@ -513,6 +480,7 @@
         <svg id="star-view" class="grow" overflow="visible"></svg>
       </div>
     </div>
+
 
     <!-- <div class="help-tooltip hide">
       <h3 class="help-title">Test Help Tooltip</h3>

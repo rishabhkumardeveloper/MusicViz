@@ -1,18 +1,22 @@
 body {
     margin: 0;
     /* padding: 0 30px; */
-    background-color: #212039;
+    background-color: #1A1A1D;
+
     /* background: linear-gradient(to bottom, #212039, #181818); */
     /* overflow: hidden; */
     font-family: Helvetica, sans-serif;
     color: #F4F4F4;
-
     font-family: proxima-nova, sans-serif;
     font-style: normal;
     font-weight: 400;
-
-    overflow: hidden;
+    overflow: scroll;
+    
 }
+
+
+    
+    
 
 body * { 
     font-family: proxima-nova, sans-serif;
@@ -26,6 +30,7 @@ h1, h2, h3, h4, h5, h6 {
     font-style: italic;
     font-weight: 800;
 }
+
 
 h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child, h6:first-child {
     margin-top: 0;
@@ -43,18 +48,18 @@ b, [font-weight="bold"] {
     padding-top: 30px;
     padding-bottom: 30px;
     width: 100vw;
+    
+    
 }
 
 .container-row {
     box-sizing: border-box;
-    display:flex;
-    flex-direction: row;
+    
 }
 
 .container-col {
     box-sizing: border-box;
-    display:flex;
-    flex-direction: column;
+   
 }
 
 .container-row > .cell {
@@ -115,7 +120,7 @@ b, [font-weight="bold"] {
     border-radius: 7px;
     border: 1px #fff5 solid;
     line-height: 25px;
-    /*opacity: 0.25;*/
+    opacity: 0.25;
     transition: border 0.2s;
 
     white-space: nowrap;
@@ -183,7 +188,7 @@ div.awesomplete {
     border-radius: 7px;
     border: 1px #fff5 solid;
     line-height: 25px;
-    /*opacity: 0.25;*/
+    opacity: 0.25;
     transition: border 0.2s;
 }
 
@@ -540,7 +545,7 @@ input:checked + .slider:before {
 }
 .flex-container {
     display: flex;
-    flex-direction: row;
+    flex-direction: r+ow;
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
